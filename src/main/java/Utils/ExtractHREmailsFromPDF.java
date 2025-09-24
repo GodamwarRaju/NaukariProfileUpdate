@@ -1,4 +1,4 @@
-package org.com.qa.NaukriTest;
+package Utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,11 +12,12 @@ import org.apache.pdfbox.text.PDFTextStripper;
 
 public class ExtractHREmailsFromPDF {
 
-    public static void main(String[] args) {
-        String pdfFilePath = "C:\\Users\\HP\\Downloads\\HREmailIDs\\Pune Mumbai.pdf"; // your PDF file path
-        extractEmails(pdfFilePath);
-    }
-    public static void extractEmails(String filePath) {
+//    public static void main(String[] args) {
+//        String pdfFilePath = "/Users/gkalkote/Documents/Bitbucket/NaukariProfileUpdate/src/test/resources/Emailpdf/Hyderabad.pdf"; // your PDF file path
+//        extractEmails(pdfFilePath);
+//    }
+    public static Set<String> extractEmails(String filePath) {
+        Set<String> uniqueEmails = null;
         try (PDDocument document = PDDocument.load(new File(filePath))) {
             // Extract text from PDF
             PDFTextStripper pdfStripper = new PDFTextStripper();
@@ -24,7 +25,7 @@ public class ExtractHREmailsFromPDF {
             // Regex to match emails ending with .com or .in
             Pattern emailPattern = Pattern.compile("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.(com|in)");
             Matcher matcher = emailPattern.matcher(text);
-            Set<String> uniqueEmails = new HashSet<>();
+            uniqueEmails = new HashSet<>();
             while (matcher.find()) {
                 uniqueEmails.add(matcher.group());
             }
@@ -33,5 +34,6 @@ public class ExtractHREmailsFromPDF {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return uniqueEmails;
     }
 }
