@@ -1,18 +1,7 @@
 package org.com.qa.NaukriTest;
 
-import static Utils.Constant.HYD_HR_EMAIL_PATH;
-import static Utils.Constant.PUNE_HR_EMAIL_PATH;
-import static Utils.Constant.BANG_HR_EMAIL_PATH;
-import static Utils.Constant.WFH_HR_EMAIL_PATH;
-import static Utils.Constant.TestingJobs_HR_EMAIL_PATH;
-import static Utils.Constant.OTHER_HR_EMAIL_PATH;
-
-import static Utils.Constant.RAJU_RESUME_PATH;
-import static Utils.EmailData.RAJU_EMAIL_BODY;
-import static Utils.EmailData.RAJU_EMAIL_SUBJECT;
-import static Utils.Constant.SUSHANT_RESUME_PATH;
-import static Utils.EmailData.SUSHANT_EMAIL_BODY;
-import static Utils.EmailData.SUSHANT_EMAIL_SUBJECT;
+import static Utils.Constant.*;
+import static Utils.EmailData.*;
 
 import Utils.EmailUtils;
 import Utils.ExtractHREmailsFromPDF;
@@ -26,17 +15,21 @@ import java.util.ArrayList;
 
 public class SendEmailTest {
 
-    ArrayList <String> filesPaths = (ArrayList<String>) Arrays.asList(
-            WFH_HR_EMAIL_PATH,
-            PUNE_HR_EMAIL_PATH,
-            HYD_HR_EMAIL_PATH,
-            BANG_HR_EMAIL_PATH,
-            TestingJobs_HR_EMAIL_PATH,
-            OTHER_HR_EMAIL_PATH
-            );
+    ArrayList<String> filesPaths = new ArrayList<>(
+            Arrays.asList(
+                    WFH_HR_EMAIL_PATH,
+                    PUNE_HR_EMAIL_PATH,
+                    HYD_HR_EMAIL_PATH,
+                    BANG_HR_EMAIL_PATH,
+                    TestingJobs_HR_EMAIL_PATH,
+                    OTHER_HR_EMAIL_PATH
+            )
+    );
+
 
     private String rajuEmailPassKey = "phqsuaaykrdufiav";
     private String sushantEmailPassKey = "khejraffnvojznnb";
+    private String priyaEmailPassKey = "vivukgxopmphpour";
 	
     @Test
     public void sendEmail() {
@@ -44,10 +37,13 @@ public class SendEmailTest {
         for(String filePath:filesPaths){
             Set<String> HR_Emails = ExtractHREmailsFromPDF.extractEmails(filePath);
             EmailUtils emailUtils = new EmailUtils();
-            emailUtils.sendEmailToBCC("rajugodamwar@gmail.com",rajuEmailPassKey,HR_Emails,RAJU_EMAIL_SUBJECT,RAJU_EMAIL_BODY,RAJU_RESUME_PATH);
+//            emailUtils.sendEmailToBCC("rajugodamwar@gmail.com",rajuEmailPassKey,HR_Emails,RAJU_EMAIL_SUBJECT,RAJU_EMAIL_BODY,RAJU_RESUME_PATH);
+            emailUtils.sendEmailToBCC("yadavpriya73028@gmail.com",priyaEmailPassKey,HR_Emails,PRIYA_EMAIL_SUBJECT,PRIYA_EMAIL_BODY,PRIYA_RESUME_PATH);
+
             System.out.println("Total Email Sent to HR is :"+HR_Emails.size());
         }
     }
+
     
     @Test
     public void sendEmailSushant() {

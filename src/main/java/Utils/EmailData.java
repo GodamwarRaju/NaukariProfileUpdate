@@ -75,7 +75,7 @@ public class EmailData {
             "sushj2405@gmail.com\n" +
             "7798748292\n";
 
-    public static String PRIYA_EMAIL_SUBJECT = "Application for Software Engineer / Full Stack Developer Position | Serving Notice Period|7359325496";
+    public static String PRIYA_EMAIL_SUBJECT = "Application for Software Engineer / Full Stack Developer Position | Serving Notice Period | 7359325496";
     public static final String PRIYA_EMAIL_BODY =
             "<p>Hello,<br>" +
                     "Greetings of the day!</p>" +
@@ -90,12 +90,12 @@ public class EmailData {
 
                     "<p><b>Skills:</b></p>" +
                     "<ul>" +
-                    "<li>✔️ <b>Frontend:</b> Angular, React, HTML, CSS, JavaScript, Knockout.js (basic understanding)</li>" +
-                    "<li>✔️ <b>Backend:</b> C#, .NET (3.5/4.0), ASP.NET, ASP.NET MVC, Web API, Node.js, Express.js</li>" +
-                    "<li>✔️ <b>Databases:</b> SQL Server, PostgreSQL, MongoDB</li>" +
+                    "<li>✔️ <b>Frontend:</b> Angular, React, HTML, CSS, JavaScript</li>" +
+                    "<li>✔️ <b>Backend:</b> C#, .NET , ASP.NET, ASP.NET MVC, Web API, Node.js, Express.js</li>" +
+                    "<li>✔️ <b>Databases:</b> SQL, PostgreSQL, MongoDB</li>" +
                     "<li>✔️ <b>Other Technologies:</b> Redis, WebSocket, SignalR, MQTT, Kafka, GraphQL, Apollo, Docker</li>" +
-                    "<li>✔️ <b>Tools & Platforms:</b> Jenkins, GitHub, pgAdmin, RESTful API development, JSON, AJAX</li>" +
-                    "<li>✔️ <b>Additional Knowledge:</b> OOP concepts, system design basics, business logic development, requirement gathering, client interaction</li>" +
+                    "<li>✔️ <b>Tools & Platforms:</b> Jenkins, GitHub, bitbucket, pgAdmin, RESTful API development, JSON, AJAX</li>" +
+                    "<li>✔️ <b>Additional Knowledge:</b> OOPs concepts, system design , business logic development, requirement gathering, client interaction</li>" +
                     "</ul>" +
 
                     "<p>I have experience in developing web and WinForms applications, integrating front-end with backend services, " +
@@ -109,6 +109,6 @@ public class EmailData {
                     "📞 <a href='tel:+917359325496'>+91 7359325496</a><br>" +
                     "✉️ <a href='mailto:yadavpriya73028@gmail.com'>yadavpriya73028@gmail.com</a><br>" +
                     "🔗 <a href='https://www.linkedin.com/in/' target='_blank'>LinkedIn Profile</a></p>";
-        
+
 }
 
