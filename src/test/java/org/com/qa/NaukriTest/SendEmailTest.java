@@ -37,7 +37,7 @@ public class SendEmailTest {
         for(String filePath:filesPaths){
             Set<String> HR_Emails = ExtractHREmailsFromPDF.extractEmails(filePath);
             EmailUtils emailUtils = new EmailUtils();
-//            emailUtils.sendEmailToBCC("rajugodamwar@gmail.com",rajuEmailPassKey,HR_Emails,RAJU_EMAIL_SUBJECT,RAJU_EMAIL_BODY,RAJU_RESUME_PATH);
+            emailUtils.sendEmailToBCC("rajugodamwar@gmail.com",rajuEmailPassKey,HR_Emails,RAJU_EMAIL_SUBJECT,RAJU_EMAIL_BODY,RAJU_RESUME_PATH);
             emailUtils.sendEmailToBCC("yadavpriya73028@gmail.com",priyaEmailPassKey,HR_Emails,PRIYA_EMAIL_SUBJECT,PRIYA_EMAIL_BODY,PRIYA_RESUME_PATH);
 
             System.out.println("Total Email Sent to HR is :"+HR_Emails.size());
