@@ -11,6 +11,9 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 public class ExtractHREmailsFromPDF {
+    public static void main(String[] args) {
+        extractEmails("C:\\Users\\HP\\OneDrive\\Pictures\\Documents\\GitHub\\NaukariProfileUpdate\\src\\test\\resources\\Emailpdf\\Hyderabad.pdf");
+    }
     // Method to extract unique email IDs from a PDF file
     public static Set<String> extractEmails(String filePath) {
         Set<String> uniqueEmails = null;
